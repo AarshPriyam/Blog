@@ -21,9 +21,9 @@ module.exports = {
 
         newPost.save().then(post => {
             console.log(post);
-            req.flash('success-message','Post Created Successfully');
-            res.redirect('/admin/posts');
-        })
+            res.flash('success-message','post created successfully'); 
+            res.redirect('/admin/post');
+        });
     },
 
     createPosts: (req, res) => {

@@ -16,12 +16,12 @@ router.route('/')
 
 
 router.route('/posts')
-    .get(adminControllers.getPosts)
-    .post(adminControllers.submitPosts);
+    .get(adminControllers.getPosts);
 
 
 router.route('/posts/create')
-    .get(adminControllers.createPosts );
+    .get(adminControllers.createPosts )
+    .post(adminControllers.submitPosts);
 
 
 module.exports = router;

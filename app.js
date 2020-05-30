@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // flash and session
-app.use(session({
+app.use( session({
     secret: 'anysecret',
     saveUninitialized: true,
     resave: true
@@ -44,7 +44,7 @@ app.set('view engine','handlebars');
 const defaultRoutes = require('./routes/defaultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 app.use('/',defaultRoutes);
-app.use('/admin',adminRoutes);  
+app.use('/admin',adminRoutes);
 
 
 app.listen(PORT, () => {
