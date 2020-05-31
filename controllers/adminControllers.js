@@ -5,11 +5,13 @@ const Post =  require('../models/PostModel');
 module.exports = {
 
     index: (req, res) => {
-         res.render('admin/index');
-     },
+         Post.find().then(posts => {
+             res.render('admin/posts/index', {posts: posts }); 
+         });
+     }, 
 
      getPosts: (req, res) => {
-         res.send("all posts blahh");
+         res.render('admin/posts/index');
      },
 
      submitPosts: (req, res) => {

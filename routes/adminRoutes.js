@@ -16,8 +16,8 @@ router.route('/')
 
 
 router.route('/posts')
-    .get(adminControllers.getPosts);
-
+    .get(adminControllers.getPosts)
+    
 
 router.route('/posts/create')
     .get(adminControllers.createPosts )

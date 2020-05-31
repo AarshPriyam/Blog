@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const hbs = require('express-handlebars');
 const {mongoDbUrl, PORT} = require('./config/configuration');
-const flash = require('flash');
+const flash = require('connect-flash');
 const session = require('express-session');
 
 const app = express();
